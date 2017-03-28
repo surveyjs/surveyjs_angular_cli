@@ -43,7 +43,7 @@ You can just clone this repo and run "ng serve" command.
 	<h1>Survey JS Editor</h1><survey-editor></survey-editor>
 	```
 
-6. **Add "jQuery polyfill" for bootstrap in the polyfills.ts file.**
+6. **Add "jQuery polyfill" for bootstrap in the polyfills.ts file (https://github.com/angular/angular-cli/issues/2129).**
 
 	```
 	import * as jQuery from 'jquery';
