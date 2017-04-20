@@ -22,6 +22,8 @@
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
+    "jquery": "^2.1.0",
+    "bootstrap": "^3.3.6",
     "survey-angular": "^0.12.5",
     "surveyjs-editor": "^0.12.5",
     "zone.js": "^0.8.4"
@@ -42,6 +44,8 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.0",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.16.1",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0"
