@@ -6,10 +6,11 @@ import * as Survey from 'survey-angular';
     template: `<div class="survey-container contentcontainer codecontainer"><div id="surveyElement"></div></div>`,
 })
 export class SurveyComponent  {
-    @Input() json: any;
+    @Input() set json (value: object) {
+        const surveyModel = new Survey.ReactSurveyModel(value);
+        Survey.SurveyNG.render('surveyElement', { model: surveyModel });
+    } 
 
     ngOnInit() {
-        let surveyModel = new Survey.ReactSurveyModel(this.json);
-        Survey.SurveyNG.render('surveyElement', { model: surveyModel });
     }
 }
