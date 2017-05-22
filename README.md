@@ -19,13 +19,20 @@ You can just clone this repo and run "ng serve" command.
 	npm install -save surveyjs-editor
 	```
 
-3. **Add SurveyJS and Editor components files.**
+3. **Add knockout typings to the '/src/tsconfig.app.json' file.**
+	```
+    "types": [
+      "knockout"
+    ]
+	```
+
+4. **Add SurveyJS and Editor components files.**
 	```
 	src/app/survey.component.ts
 	src/app/survey.editor.component.ts
 	```
 
-4. **Use compoents in the app.module.ts file.**
+5. **Use compoents in the app.module.ts file.**
 	```
 	import { SurveyComponent } from './survey.component';
 	import { SurveyEditorComponent } from './survey.editor.component';
@@ -37,20 +44,20 @@ You can just clone this repo and run "ng serve" command.
     ],
 	```
 	  
-5. **Change markup in the app.component.html file.**
+6. **Change markup in the app.component.html file.**
 	```
 	<h1>Survey</h1><survey [json]="json"></survey>
 	<h1>Survey JS Editor</h1><survey-editor></survey-editor>
 	```
 
-6. **Add "jQuery polyfill" for bootstrap in the polyfills.ts file (https://github.com/angular/angular-cli/issues/2129).**
+7. **Add "jQuery polyfill" for bootstrap in the polyfills.ts file (https://github.com/angular/angular-cli/issues/2129).**
 
 	```
 	import * as jQuery from 'jquery';
 	window['jQuery'] = jQuery;
 	```
 
-7. **Run project.**
+8. **Run project.**
 	```
 	ng serve
 	```
