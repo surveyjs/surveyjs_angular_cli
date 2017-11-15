@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import * as SurveyEditor from 'surveyjs-editor';
+import * as Survey from 'survey-knockout';
 
 @Component({
     selector: 'survey-editor',
@@ -10,6 +11,7 @@ export class SurveyEditorComponent  {
     @Input() json: any;
     @Output() surveySaved: EventEmitter<Object> = new EventEmitter();
     ngOnInit() {
+        Survey.JsonObject.metaData.addProperty("questionbase", {name: "tag:number", default: 0});
         let editorOptions = {showEmbededSurveyTab: true, generateValidJSON : true};
         this.editor = new SurveyEditor.SurveyEditor('surveyEditorContainer', editorOptions);
         this.editor.text = JSON.stringify(this.json);
