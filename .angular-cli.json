@@ -7,10 +7,7 @@
     {
       "root": "src",
       "outDir": "dist",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
+      "assets": ["assets", "favicon.ico"],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
@@ -22,9 +19,17 @@
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/survey-angular/survey.css",
-        "../node_modules/surveyjs-editor/surveyeditor.css"
+        "../node_modules/surveyjs-editor/surveyeditor.css",
+        "../node_modules/jquery-ui/themes/base/all.css",
+        "../node_modules/nouislider/distribute/nouislider.css",
+        "../node_modules/select2/dist/css/select2.css",
+        "../node_modules/bootstrap-slider/dist/css/bootstrap-slider.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/jquery-ui/ui/widgets/datepicker.js",
+        "../node_modules/select2/dist/js/select2.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

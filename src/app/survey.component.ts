@@ -1,5 +1,20 @@
 import { Component, Input } from "@angular/core";
 import * as Survey from "survey-angular";
+import * as widgets from "surveyjs-widgets";
+
+widgets.icheck(Survey);
+widgets.select2(Survey);
+widgets.imagepicker(Survey);
+widgets.inputmask(Survey);
+widgets.jquerybarrating(Survey);
+widgets.jqueryuidatepicker(Survey);
+widgets.nouislider(Survey);
+widgets.select2tagbox(Survey);
+widgets.signaturepad(Survey);
+widgets.sortablejs(Survey);
+widgets.ckeditor(Survey);
+widgets.autocomplete(Survey);
+widgets.bootstrapslider(Survey);
 
 @Component({
   selector: "survey",
