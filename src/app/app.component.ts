@@ -14,6 +14,12 @@ export class AppComponent {
       {
         elements: [
           {
+            type: "barrating",
+            name: "barrating",
+            ratingTheme: "css-stars",
+            choices: [1, 2, 3, 4, 5]
+          },
+          {
             type: "bootstrapslider",
             name: "bootstrapslider"
           },
