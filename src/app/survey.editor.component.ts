@@ -3,6 +3,8 @@ import * as SurveyKo from "survey-knockout";
 import * as SurveyEditor from "surveyjs-editor";
 import * as widgets from "surveyjs-widgets";
 
+import "inputmask/dist/inputmask/phone-codes/phone.js";
+
 widgets.icheck(SurveyKo);
 widgets.select2(SurveyKo);
 widgets.imagepicker(SurveyKo);
