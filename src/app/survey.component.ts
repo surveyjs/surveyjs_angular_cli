@@ -17,6 +17,7 @@ widgets.sortablejs(Survey);
 widgets.ckeditor(Survey);
 widgets.autocomplete(Survey);
 widgets.bootstrapslider(Survey);
+widgets.prettycheckbox(Survey);
 
 @Component({
   selector: "survey",

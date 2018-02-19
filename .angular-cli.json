@@ -24,6 +24,7 @@
         "../node_modules/jquery-ui/themes/base/datepicker.css",
         "../node_modules/nouislider/distribute/nouislider.css",
         "../node_modules/select2/dist/css/select2.css",
+        "../node_modules/pretty-checkbox/dist/pretty-checkbox.css",
         "../node_modules/bootstrap-slider/dist/css/bootstrap-slider.css",
         "../node_modules/jquery-bar-rating/dist/themes/bars-pill.css",
         "../node_modules/jquery-bar-rating/dist/themes/css-stars.css",

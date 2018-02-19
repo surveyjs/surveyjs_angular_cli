@@ -28,6 +28,12 @@ export class AppComponent {
             name: "bootstrapslider"
           },
           {
+            type: "radiogroup",
+            name: "prettycheckbox",
+            renderAs: "prettycheckbox",
+            choices: ["One", "Two", "Three"]
+          },
+          {
             type: "dropdown",
             renderAs: "select2",
             choicesByUrl: {
