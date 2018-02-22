@@ -21,7 +21,8 @@ widgets.prettycheckbox(Survey);
 
 @Component({
   selector: "survey",
-  template: `<div class="survey-container contentcontainer codecontainer"><div id="surveyElement"></div></div>`
+  template: `<div class="survey-container contentcontainer codecontainer"><div id="surveyElement"></div></div>`,
+  styleUrls: ['./survey.component.css']
 })
 export class SurveyComponent {
   @Input()
