@@ -15,7 +15,8 @@ export class AppComponent {
         elements: [
           {
             type: "text",
-            inputMask: "phone"
+            inputMask: "phone",
+            popupdescription: "Some text"
           },
           {
             type: "barrating",

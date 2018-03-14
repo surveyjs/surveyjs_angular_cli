@@ -49,6 +49,12 @@ export class SurveyEditorComponent {
   @Input() json: any;
   @Output() surveySaved: EventEmitter<Object> = new EventEmitter();
   ngOnInit() {
+    SurveyKo.JsonObject.metaData.addProperty(
+      "questionbase",
+      "popupdescription:text"
+    );
+    SurveyKo.JsonObject.metaData.addProperty("page", "popupdescription:text");
+
     let editorOptions = { showEmbededSurveyTab: true, generateValidJSON: true };
     this.editor = new SurveyEditor.SurveyEditor(
       "surveyEditorContainer",
