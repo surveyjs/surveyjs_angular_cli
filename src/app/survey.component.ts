@@ -6,7 +6,6 @@ import "inputmask/dist/inputmask/phone-codes/phone.js";
 
 widgets.icheck(Survey);
 widgets.select2(Survey);
-widgets.imagepicker(Survey);
 widgets.inputmask(Survey);
 widgets.jquerybarrating(Survey);
 widgets.jqueryuidatepicker(Survey);
