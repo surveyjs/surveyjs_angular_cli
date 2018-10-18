@@ -16,6 +16,7 @@ You can just clone this repo and run "ng serve" command.
  2. **Add SurveyJS + Editor dependencies.**
 	```
 	npm install -save survey-angular
+	npm install -save surveyjs-widgets
 	npm install -save surveyjs-editor
 	```
 
