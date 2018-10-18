@@ -2,6 +2,6 @@
   {{title}}
 </h1>
 
-<h1>Survey</h1><survey [json]="json"></survey>
+<h1>Survey</h1><survey [json]="json" (submitSurvey)="sendData($event)"></survey>
 
-<h1>Survey JS Editor</h1><survey-editor [json]="json" (submitSurvey)="sendData($event)" (surveySaved)="onSurveySaved($event)"></survey-editor>
+<h1>Survey JS Editor</h1><survey-editor [json]="json"  (surveySaved)="onSurveySaved($event)"></survey-editor>
