@@ -91,5 +91,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Samples online
 
-[Angular 7](https://codesandbox.io/s/wwvj5123yl)
+[SurveyJS + Angular 7](https://codesandbox.io/s/wwvj5123yl)
 
