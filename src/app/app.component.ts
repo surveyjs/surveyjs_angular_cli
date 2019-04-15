@@ -193,4 +193,9 @@ export class AppComponent {
   onSurveySaved(survey) {
     this.json = survey;
   }
+
+  sendData(result) {
+    //TODO update with your own behavior    
+    console.log(result);
+  }
 }

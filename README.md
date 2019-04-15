@@ -1,8 +1,8 @@
-# SurveyjsAngularCli
+# SurveyJS + Angular Cli boilerplate
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0 and modified to use SurveyJS and Editor libraries.
 
-You can just clone this repo and run "ng serve" command.
+You can just clone this repo and run "npm i" and "ng serve" command.
 
 
 ## Steps to add SurveyJS + Editor into the generated empty project
@@ -16,6 +16,7 @@ You can just clone this repo and run "ng serve" command.
  2. **Add SurveyJS + Editor dependencies.**
 	```
 	npm install -save survey-angular
+	npm install -save surveyjs-widgets
 	npm install -save surveyjs-editor
 	```
 
@@ -87,3 +88,8 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Samples online
+
+[SurveyJS + Angular 7](https://codesandbox.io/s/wwvj5123yl)
+
