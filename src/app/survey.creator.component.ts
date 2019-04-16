@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
 import * as SurveyKo from "survey-knockout";
-import * as SurveyEditor from "surveyjs-editor";
+import * as SurveyCreator from "survey-creator";
 import * as widgets from "surveyjs-widgets";
 
 import "inputmask/dist/inputmask/phone-codes/phone.js";
@@ -34,17 +34,19 @@ var CkEditor_ModalEditor = {
     }
   }
 };
-SurveyEditor.SurveyPropertyModalEditor.registerCustomWidget(
+SurveyCreator.SurveyPropertyModalEditor.registerCustomWidget(
   "html",
   CkEditor_ModalEditor
 );
 
 @Component({
-  selector: "survey-editor",
-  template: `<div id="surveyEditorContainer"></div>`
+  selector: "survey-creator",
+  template: `
+    <div id="surveyCreatorContainer"></div>
+  `
 })
-export class SurveyEditorComponent {
-  editor: SurveyEditor.SurveyEditor;
+export class SurveyCreatorComponent {
+  surveyCreator: SurveyCreator.SurveyCreator;
   @Input() json: any;
   @Output() surveySaved: EventEmitter<Object> = new EventEmitter();
   ngOnInit() {
@@ -54,17 +56,17 @@ export class SurveyEditorComponent {
     );
     SurveyKo.JsonObject.metaData.addProperty("page", "popupdescription:text");
 
-    let editorOptions = { showEmbededSurveyTab: true, generateValidJSON: true };
-    this.editor = new SurveyEditor.SurveyEditor(
-      "surveyEditorContainer",
-      editorOptions
+    let options = { showEmbededSurveyTab: true, generateValidJSON: true };
+    this.surveyCreator = new SurveyCreator.SurveyCreator(
+      "surveyCreatorContainer",
+      options
     );
-    this.editor.text = JSON.stringify(this.json);
-    this.editor.saveSurveyFunc = this.saveMySurvey;
+    this.surveyCreator.text = JSON.stringify(this.json);
+    this.surveyCreator.saveSurveyFunc = this.saveMySurvey;
   }
 
   saveMySurvey = () => {
-    console.log(JSON.stringify(this.editor.text));
-    this.surveySaved.emit(JSON.parse(this.editor.text));
+    console.log(JSON.stringify(this.surveyCreator.text));
+    this.surveySaved.emit(JSON.parse(this.surveyCreator.text));
   };
 }

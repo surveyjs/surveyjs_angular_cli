@@ -1,11 +1,11 @@
-# SurveyJS + Angular Cli boilerplate
+# Angular 5 Cli (QuickStart Boilerplate) + SurveyJS: Survey Library and Survey Creator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0 and modified to use SurveyJS and Editor libraries.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) and modified to use SurveyJS: Survey Library and Survey Creator.
 
 You can just clone this repo and run "npm i" and "ng serve" command.
 
 
-## Steps to add SurveyJS + Editor into the generated empty project
+## Steps to add SurveyJS: Survey Library and Survey Creator into the generated empty project
 
  1. **Create a new project.**  
 	```
@@ -13,11 +13,11 @@ You can just clone this repo and run "npm i" and "ng serve" command.
 	cd surveyjs-angular-cli
 	```
 
- 2. **Add SurveyJS + Editor dependencies.**
+ 2. **Add SurveyJS: Survey Library and Survey Creator dependencies.**
 	```
 	npm install -save survey-angular
 	npm install -save surveyjs-widgets
-	npm install -save surveyjs-editor
+	npm install -save survey-cretor
 	```
 
 3. **Add knockout typings to the '/src/tsconfig.app.json' file.**
@@ -27,28 +27,28 @@ You can just clone this repo and run "npm i" and "ng serve" command.
     ]
 	```
 
-4. **Add SurveyJS and Editor components files.**
+4. **Add Survey and Survey Creator components files.**
 	```
 	src/app/survey.component.ts
-	src/app/survey.editor.component.ts
+	src/app/survey.creator.component.ts
 	```
 
 5. **Use compoents in the app.module.ts file.**
 	```
 	import { SurveyComponent } from './survey.component';
-	import { SurveyEditorComponent } from './survey.editor.component';
+	import { SurveyCreatorComponent } from './survey.creator.component';
 	@NgModule({
     declarations: [
       AppComponent,
       SurveyComponent,
-      SurveyEditorComponent
+      SurveyCreatorComponent
     ],
 	```
 	  
 6. **Change markup in the app.component.html file.**
 	```
 	<h1>Survey</h1><survey [json]="json"></survey>
-	<h1>Survey JS Editor</h1><survey-editor></survey-editor>
+	<h1>SurveyJS Creator</h1><survey-creator></survey-creator>
 	```
 
 7. **Add "jQuery polyfill" for bootstrap in the polyfills.ts file (https://github.com/angular/angular-cli/issues/2129).**

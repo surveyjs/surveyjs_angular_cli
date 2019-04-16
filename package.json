@@ -27,9 +27,9 @@
     "jquery": "^3.3.1",
     "rxjs": "^5.5.8",
     "survey-knockout": "^1.0.20",
-    "survey-angular": "^1.0.20",
-    "surveyjs-editor": "^1.0.20",
-    "surveyjs-widgets": "^1.0.20",
+    "survey-angular": "latest",
+    "survey-creator": "latest",
+    "surveyjs-widgets": "latest",
     "zone.js": "^0.8.20"
   },
   "devDependencies": {

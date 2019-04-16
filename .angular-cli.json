@@ -19,7 +19,7 @@
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/survey-angular/survey.css",
-        "../node_modules/surveyjs-editor/surveyeditor.css",
+        "../node_modules/survey-creator/survey-creator.css",
         "../node_modules/jquery-ui/themes/base/theme.css",
         "../node_modules/jquery-ui/themes/base/datepicker.css",
         "../node_modules/nouislider/distribute/nouislider.css",
