@@ -1,12 +1,16 @@
 import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
+import { SurveyCreatorComponent } from './survey.creator.component';
+import { SurveyComponent } from './survey.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        SurveyComponent,
+        SurveyCreatorComponent
       ],
     }).compileComponents();
   }));
