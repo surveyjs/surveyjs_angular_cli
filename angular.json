@@ -1,0 +1,176 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "surveyjs-angular-cli": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "polyfills": "src/polyfills.ts",
+            "assets": [
+              "src/assets",
+              "src/favicon.ico"
+            ],
+            "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/survey-angular/survey.css",
+              "node_modules/survey-creator/survey-creator.css",
+              "node_modules/jquery-ui/themes/base/theme.css",
+              "node_modules/jquery-ui/themes/base/datepicker.css",
+              "node_modules/nouislider/distribute/nouislider.css",
+              "node_modules/select2/dist/css/select2.css",
+              "node_modules/pretty-checkbox/dist/pretty-checkbox.css",
+              "node_modules/bootstrap-slider/dist/css/bootstrap-slider.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-pill.css",
+              "node_modules/jquery-bar-rating/dist/themes/css-stars.css",
+              "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-1to10.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-horizontal.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-movie.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-reversed.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-square.css",
+              "node_modules/jquery-bar-rating/dist/themes/bootstrap-stars.css",
+              "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars-o.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/jquery-ui/ui/widgets/datepicker.js",
+              "node_modules/select2/dist/js/select2.js",
+              "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "surveyjs-angular-cli:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "surveyjs-angular-cli:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "surveyjs-angular-cli:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "karmaConfig": "./karma.conf.js",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/jquery-ui/ui/widgets/datepicker.js",
+              "node_modules/select2/dist/js/select2.js",
+              "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js"
+            ],
+            "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/survey-angular/survey.css",
+              "node_modules/survey-creator/survey-creator.css",
+              "node_modules/jquery-ui/themes/base/theme.css",
+              "node_modules/jquery-ui/themes/base/datepicker.css",
+              "node_modules/nouislider/distribute/nouislider.css",
+              "node_modules/select2/dist/css/select2.css",
+              "node_modules/pretty-checkbox/dist/pretty-checkbox.css",
+              "node_modules/bootstrap-slider/dist/css/bootstrap-slider.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-pill.css",
+              "node_modules/jquery-bar-rating/dist/themes/css-stars.css",
+              "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-1to10.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-horizontal.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-movie.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-reversed.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-square.css",
+              "node_modules/jquery-bar-rating/dist/themes/bootstrap-stars.css",
+              "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars-o.css"
+            ],
+            "assets": [
+              "src/assets",
+              "src/favicon.ico"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": []
+          }
+        }
+      }
+    },
+    "surveyjs-angular-cli-e2e": {
+      "root": "e2e",
+      "sourceRoot": "e2e",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "./protractor.conf.js",
+            "devServerTarget": "surveyjs-angular-cli:serve"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "e2e/tsconfig.e2e.json"
+            ],
+            "exclude": []
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "surveyjs-angular-cli",
+  "schematics": {
+    "@schematics/angular:component": {
+      "prefix": "app",
+      "styleext": "css"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "app"
+    }
+  }
+}
