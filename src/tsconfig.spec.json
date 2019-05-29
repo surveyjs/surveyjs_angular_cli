@@ -7,11 +7,13 @@
     "baseUrl": "",
     "types": [
       "jasmine",
-      "node"
+      "node",
+      "knockout"
     ]
   },
   "files": [
-    "test.ts"
+    "test.ts",
+    "polyfills.ts"
   ],
   "include": [
     "**/*.spec.ts",
