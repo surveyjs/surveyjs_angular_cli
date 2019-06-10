@@ -23,6 +23,7 @@
     "@angular/platform-server": "^7.2.15",
     "@angular/router": "^7.2.15",
     "bootstrap": "^3.3.6",
+    "ckeditor": "^4.11.4",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
     "rxjs": "^6.5.2",
