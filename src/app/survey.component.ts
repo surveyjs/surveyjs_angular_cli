@@ -1,7 +1,7 @@
 import { Component, Input, EventEmitter, Output, OnInit } from '@angular/core';
 import * as Survey from 'survey-angular';
 import * as widgets from 'surveyjs-widgets';
-
+import * as SurveyPDF from 'survey-pdf';
 import 'inputmask/dist/inputmask/phone-codes/phone.js';
 
 widgets.icheck(Survey);
@@ -24,25 +24,18 @@ Survey.JsonObject.metaData.addProperty('page', 'popupdescription:text');
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'survey',
-  template: `<div class='survey-container contentcontainer codecontainer'><div id='surveyElement'></div></div>`
+  template: `<div class='survey-container contentcontainer codecontainer'><div id='surveyElement'></div><button (click)='savePDF()'>Save PDF</button></div>`
 })
 export class SurveyComponent implements OnInit {
   @Output() submitSurvey = new EventEmitter<any>();
-
   @Input()
   json: object;
-
-
-  click(result) {
-    console.log(result);
-
-  }
+  result: any;
 
   ngOnInit() {
     const surveyModel = new Survey.Model(this.json);
     surveyModel.onAfterRenderQuestion.add((survey, options) => {
       if (!options.question.popupdescription) { return; }
-
       // Add a button;
       const btn = document.createElement('button');
       btn.className = 'btn btn-info btn-xs';
@@ -59,9 +52,28 @@ export class SurveyComponent implements OnInit {
       header.appendChild(btn);
     });
     surveyModel.onComplete
-      .add(result =>
-        this.submitSurvey.emit(result.data)
+      .add((result, options) => {
+        this.submitSurvey.emit(result.data);
+        this.result = result.data;
+      }
       );
     Survey.SurveyNG.render('surveyElement', { model: surveyModel });
+  }
+  savePDF() {
+    var options = {
+      fontSize: 14,
+      margins: {
+        left: 10,
+        right: 10,
+        top: 10,
+        bot: 10
+      }
+    };
+    //TODO
+    //Fix after 1.0.99
+    const surveyPDF = new SurveyPDF["Survey"](this.json, options);
+    console.log(this.result);
+    surveyPDF.data = this.result;
+    surveyPDF.save("survey PDF example");
   }
 }

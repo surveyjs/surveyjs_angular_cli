@@ -27,12 +27,13 @@
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
     "rxjs": "^6.5.2",
-    "survey-knockout": "latest",
     "survey-angular": "latest",
     "survey-creator": "latest",
+    "survey-knockout": "latest",
+    "survey-pdf": "^1.0.98",
     "surveyjs-widgets": "latest",
     "tslib": "^1.9.0",
-    "zone.js": "^0.8.29"
+    "zone.js": "git://github.com/JiaLiPassion/zone.js.git#dp-temp-dist"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
