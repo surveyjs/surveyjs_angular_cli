@@ -69,9 +69,7 @@ export class SurveyComponent implements OnInit {
         bot: 10
       }
     };
-    //TODO
-    //Fix after 1.0.99
-    const surveyPDF = new SurveyPDF["Survey"](this.json, options);
+    const surveyPDF = new SurveyPDF.Survey(this.json, options);
     console.log(this.result);
     surveyPDF.data = this.result;
     surveyPDF.save("survey PDF example");
