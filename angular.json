@@ -47,7 +47,8 @@
               "node_modules/jquery-ui/ui/widgets/datepicker.js",
               "node_modules/select2/dist/js/select2.js",
               "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js",
-              "node_modules/ckeditor/ckeditor.js"
+              "node_modules/ckeditor/ckeditor.js",
+              "node_modules/emotion-ratings/dist/emotion-ratings.js"
             ]
           },
           "configurations": {

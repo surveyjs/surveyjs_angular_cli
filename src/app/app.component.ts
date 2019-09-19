@@ -63,6 +63,12 @@ export class AppComponent {
             title: "Your favorite date:",
             dateFormat: "mm/dd/yy",
             isRequired: true
+          },
+          {
+            "type": "emotionsratings",
+            "name": "emotionsratings-widget",
+            "title": "Please rate the movie you've just watched",
+            "choices": ["1", "2", "3", "4", "5"]
           }
         ]
       },
