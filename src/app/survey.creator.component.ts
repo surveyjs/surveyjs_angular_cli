@@ -17,7 +17,7 @@ widgets.sortablejs(SurveyKo);
 widgets.ckeditor(SurveyKo);
 widgets.autocomplete(SurveyKo);
 widgets.bootstrapslider(SurveyKo);
-widgets.emotionsratings(SurveyKo);
+//widgets.emotionsratings(SurveyKo);
 
 var CkEditor_ModalEditor = {
   afterRender: function(modalEditor, htmlElement) {

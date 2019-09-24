@@ -17,7 +17,7 @@ widgets.ckeditor(Survey);
 widgets.autocomplete(Survey);
 widgets.bootstrapslider(Survey);
 widgets.prettycheckbox(Survey);
-widgets.emotionsratings(Survey);
+//widgets.emotionsratings(Survey);
 
 Survey.JsonObject.metaData.addProperty('questionbase', 'popupdescription:text');
 Survey.JsonObject.metaData.addProperty('page', 'popupdescription:text');
