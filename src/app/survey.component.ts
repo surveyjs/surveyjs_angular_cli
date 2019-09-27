@@ -41,7 +41,6 @@ export class SurveyComponent implements OnInit {
       const btn = document.createElement('button');
       btn.className = 'btn btn-info btn-xs';
       btn.innerHTML = 'More Info';
-      const question = options.question;
       btn.onclick = function () {
         // showDescription(question);
         alert(options.question.popupdescription);

@@ -34,7 +34,7 @@
     "survey-pdf": "latest",
     "surveyjs-widgets": "latest",
     "tslib": "^1.9.0",
-    "zone.js": "git://github.com/JiaLiPassion/zone.js.git#dp-temp-dist"
+    "zone.js": "0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
