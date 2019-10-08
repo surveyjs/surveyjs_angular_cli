@@ -14,14 +14,12 @@ You can just clone this repo and run "npm i" and "ng serve" command.
 	```
 
  2. **Add SurveyJS: Survey Library and Survey Creator dependencies.**
-	```
-  
+```
 	npm install -save survey-angular
 	npm install -save surveyjs-widgets
 	npm install -save survey-creator
   npm install -save survey-pdf
-  
-	```
+```
 
 3. **Add knockout typings to the '/src/tsconfig.app.json' file.**
 	```
