@@ -15,9 +15,12 @@ You can just clone this repo and run "npm i" and "ng serve" command.
 
  2. **Add SurveyJS: Survey Library and Survey Creator dependencies.**
 	```
+  
 	npm install -save survey-angular
 	npm install -save surveyjs-widgets
 	npm install -save survey-creator
+  npm install -save survey-pdf
+  
 	```
 
 3. **Add knockout typings to the '/src/tsconfig.app.json' file.**
@@ -57,8 +60,42 @@ You can just clone this repo and run "npm i" and "ng serve" command.
 	import * as jQuery from 'jquery';
 	window['jQuery'] = jQuery;
 	```
+  
+8. **Uupdate the "build" section of the angular.json file to include the following:**
+	```
+     "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/survey-angular/survey.css",
+              "node_modules/survey-creator/survey-creator.css",
+              "node_modules/jquery-ui/themes/base/theme.css",
+              "node_modules/jquery-ui/themes/base/datepicker.css",
+              "node_modules/nouislider/distribute/nouislider.css",
+              "node_modules/select2/dist/css/select2.css",
+              "node_modules/pretty-checkbox/dist/pretty-checkbox.css",
+              "node_modules/bootstrap-slider/dist/css/bootstrap-slider.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-pill.css",
+              "node_modules/jquery-bar-rating/dist/themes/css-stars.css",
+              "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-1to10.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-horizontal.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-movie.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-reversed.css",
+              "node_modules/jquery-bar-rating/dist/themes/bars-square.css",
+              "node_modules/jquery-bar-rating/dist/themes/bootstrap-stars.css",
+              "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars-o.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/jquery-ui/ui/widgets/datepicker.js",
+              "node_modules/select2/dist/js/select2.js",
+              "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js",
+              "node_modules/ckeditor/ckeditor.js",
+              "node_modules/emotion-ratings/dist/emotion-ratings.js"
+            ]
+	```
 
-8. **Run project.**
+9. **Run project.**
 	```
 	ng serve
 	```
