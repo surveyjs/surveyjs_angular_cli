@@ -19,6 +19,8 @@ widgets.autocomplete(SurveyKo);
 widgets.bootstrapslider(SurveyKo);
 //widgets.emotionsratings(SurveyKo);
 
+SurveyCreator.StylesManager.applyTheme("default");
+
 var CkEditor_ModalEditor = {
   afterRender: function(modalEditor, htmlElement) {
     var editor = window["CKEDITOR"].replace(htmlElement);

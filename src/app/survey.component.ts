@@ -22,6 +22,8 @@ widgets.prettycheckbox(Survey);
 Survey.JsonObject.metaData.addProperty('questionbase', 'popupdescription:text');
 Survey.JsonObject.metaData.addProperty('page', 'popupdescription:text');
 
+Survey.StylesManager.applyTheme("default");
+
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'survey',
