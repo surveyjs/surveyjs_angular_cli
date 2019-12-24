@@ -363,7 +363,7 @@ export class SurveyAnalyticsComponent implements OnInit {
 
     var normalizedData = data.map(function(item) {
       survey.getAllQuestions().forEach(function(q) {
-        if (!item[q.name]) {
+        if (item[q.name] === undefined) {
           item[q.name] = "";
         }
       });
