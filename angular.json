@@ -44,6 +44,10 @@
               "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars-o.css"
             ],
             "scripts": [
+              "node_modules/ace-builds/src-min/ace.js",
+              "node_modules/ace-builds/src-min/worker-json.js",
+              "node_modules/ace-builds/src-min/mode-json.js",
+              "node_modules/ace-builds/src-min/ext-language_tools.js",
               "node_modules/jquery/dist/jquery.js",
               "node_modules/jquery-ui/ui/widgets/datepicker.js",
               "node_modules/select2/dist/js/select2.js",
