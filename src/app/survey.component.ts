@@ -1,6 +1,7 @@
 import { Component, Input, EventEmitter, Output, OnInit } from '@angular/core';
 import * as Survey from 'survey-angular';
 import * as widgets from 'surveyjs-widgets';
+import * as SurveyCore from "survey-core";
 import * as SurveyPDF from 'survey-pdf';
 import 'inputmask/dist/inputmask/phone-codes/phone.js';
 
@@ -18,6 +19,20 @@ widgets.autocomplete(Survey);
 widgets.bootstrapslider(Survey);
 widgets.prettycheckbox(Survey);
 //widgets.emotionsratings(Survey);
+
+widgets.icheck(SurveyCore);
+widgets.select2(SurveyCore);
+widgets.inputmask(SurveyCore);
+widgets.jquerybarrating(SurveyCore);
+widgets.jqueryuidatepicker(SurveyCore);
+widgets.nouislider(SurveyCore);
+widgets.select2tagbox(SurveyCore);
+widgets.signaturepad(SurveyCore);
+widgets.sortablejs(SurveyCore);
+widgets.ckeditor(SurveyCore);
+widgets.autocomplete(SurveyCore);
+widgets.bootstrapslider(SurveyCore);
+widgets.prettycheckbox(SurveyCore);
 
 Survey.JsonObject.metaData.addProperty('questionbase', 'popupdescription:text');
 Survey.JsonObject.metaData.addProperty('page', 'popupdescription:text');
