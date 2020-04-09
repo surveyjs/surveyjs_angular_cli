@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 import * as SurveyKo from "survey-knockout";
 import * as SurveyCreator from "survey-creator";
 import * as widgets from "surveyjs-widgets";
+import { init as initCustomWidget } from "./customwidget";
 
 import "inputmask/dist/inputmask/phone-codes/phone.js";
 
@@ -18,6 +19,7 @@ widgets.ckeditor(SurveyKo);
 widgets.autocomplete(SurveyKo);
 widgets.bootstrapslider(SurveyKo);
 //widgets.emotionsratings(SurveyKo);
+initCustomWidget(SurveyKo);
 
 SurveyCreator.StylesManager.applyTheme("default");
 

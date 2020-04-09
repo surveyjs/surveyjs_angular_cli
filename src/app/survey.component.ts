@@ -1,9 +1,11 @@
-import { Component, Input, EventEmitter, Output, OnInit } from '@angular/core';
-import * as Survey from 'survey-angular';
-import * as widgets from 'surveyjs-widgets';
+import { Component, Input, EventEmitter, Output, OnInit } from "@angular/core";
+import * as Survey from "survey-angular";
+import * as widgets from "surveyjs-widgets";
 import * as SurveyCore from "survey-core";
-import * as SurveyPDF from 'survey-pdf';
-import 'inputmask/dist/inputmask/phone-codes/phone.js';
+import * as SurveyPDF from "survey-pdf";
+import "inputmask/dist/inputmask/phone-codes/phone.js";
+
+import { init as initCustomWidget } from "./customwidget";
 
 widgets.icheck(Survey);
 widgets.select2(Survey);
@@ -19,6 +21,7 @@ widgets.autocomplete(Survey);
 widgets.bootstrapslider(Survey);
 widgets.prettycheckbox(Survey);
 //widgets.emotionsratings(Survey);
+initCustomWidget(Survey);
 
 widgets.icheck(SurveyCore);
 widgets.select2(SurveyCore);
