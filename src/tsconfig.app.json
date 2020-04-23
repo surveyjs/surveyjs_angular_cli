@@ -1,15 +1,11 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+    "resolveJsonModule": true,
     "outDir": "../out-tsc/app",
     "module": "es2015",
     "baseUrl": "",
-    "types": [
-      "knockout"
-    ]
+    "types": ["knockout"]
   },
-  "exclude": [
-    "test.ts",
-    "**/*.spec.ts"
-  ]
+  "exclude": ["test.ts", "**/*.spec.ts"]
 }

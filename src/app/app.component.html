@@ -1,14 +1,27 @@
-<h1>
-  {{ title }}
-</h1>
-
-<h1>Survey</h1>
-<survey [json]="json" (submitSurvey)="sendData($event)"></survey>
-
-<h1>Survey JS Creator</h1>
-<survey-creator
-  [json]="json"
-  (surveySaved)="onSurveySaved($event)"
-></survey-creator>
-
-<survey-analytics></survey-analytics>
+<div id="app">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">{{ title }}</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a routerLink="">Home</a>
+        </li>
+        <li>
+          <a routerLink="/survey">Survey</a>
+        </li>
+        <li>
+          <a routerLink="/creator">Creator</a>
+        </li>
+        <li>
+          <a routerLink="/pdfexport">PDF Export</a>
+        </li>
+        <li>
+          <a routerLink="/analytics">Analytics</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet class="view"></router-outlet>
+</div>

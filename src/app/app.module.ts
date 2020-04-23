@@ -3,20 +3,31 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 
+import { AppRoutingModule } from "./app.routing.module";
 import { AppComponent } from "./app.component";
-import { SurveyComponent } from "./survey.component";
-import { SurveyCreatorComponent } from "./survey.creator.component";
-import { SurveyAnalyticsComponent } from "./survey.analytics.component";
+import { SurveyComponent } from "./components/survey.component";
+import { HomePage } from "./pages/home.page";
+import { SurveyPage } from "./pages/survey.page";
+import { SurveyCreatorComponent } from "./components/survey.creator.component";
+import { CreatorPage } from "./pages/creator.page";
+import { SurveyAnalyticsComponent } from "./components/survey.analytics.component";
+import { AnalyticsPage } from "./pages/analytics.page";
+import { PdfExportPage } from "./pages/pdfexport.page";
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomePage,
     SurveyComponent,
+    SurveyPage,
     SurveyCreatorComponent,
-    SurveyAnalyticsComponent
+    CreatorPage,
+    SurveyAnalyticsComponent,
+    AnalyticsPage,
+    PdfExportPage,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
