@@ -4,8 +4,6 @@ import * as SurveyCreator from "survey-creator";
 import * as widgets from "surveyjs-widgets";
 import { init as initCustomWidget } from "./customwidget";
 
-import "inputmask/dist/inputmask/phone-codes/phone.js";
-
 widgets.icheck(SurveyKo);
 widgets.select2(SurveyKo);
 widgets.inputmask(SurveyKo);

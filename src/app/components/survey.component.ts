@@ -1,7 +1,6 @@
 import { Component, Input, EventEmitter, Output, OnInit } from "@angular/core";
 import * as Survey from "survey-angular";
 import * as widgets from "surveyjs-widgets";
-import "inputmask/dist/inputmask/phone-codes/phone.js";
 
 import { init as initCustomWidget } from "./customwidget";
 

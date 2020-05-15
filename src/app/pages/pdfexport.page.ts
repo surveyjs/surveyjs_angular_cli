@@ -2,7 +2,6 @@ import { Component } from "@angular/core";
 import * as SurveyPDF from "survey-pdf";
 import * as SurveyCore from "survey-core";
 import * as widgets from "surveyjs-widgets";
-import "inputmask/dist/inputmask/phone-codes/phone.js";
 
 import json from "../../assets/survey.json";
 
