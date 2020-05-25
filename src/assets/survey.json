@@ -52,6 +52,16 @@
                     "name": "bootstrapslider"
                 },
                 {
+                    "type": "nouislider",
+                    "name": "nouislider"
+                },
+                {
+                    "type": "boolean",
+                    "name": "boolean",
+                    "labelTrue": "Yes",
+                    "labelFalse": "No"
+                },
+                {
                     "type": "radiogroup",
                     "name": "prettycheckbox",
                     "renderAs": "prettycheckbox",
