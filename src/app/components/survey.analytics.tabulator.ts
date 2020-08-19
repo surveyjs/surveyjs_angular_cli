@@ -1,13 +1,13 @@
 import { Component, Input, EventEmitter, Output, OnInit } from "@angular/core";
 import * as Survey from "survey-angular";
-import * as SurveyAnalytics from "survey-analytics";
+import { Tabulator } from "survey-analytics/survey.analytics.tabulator";
 
 @Component({
   // tslint:disable-next-line:component-selector
-  selector: "survey-analytics",
+  selector: "survey-analytics-tabulator",
   template: ` <div id="surveyAnalyticsContainer"></div> `,
 })
-export class SurveyAnalyticsComponent implements OnInit {
+export class SurveyAnalyticsTabulatorComponent implements OnInit {
   @Input() json: any;
   @Output() surveySaved: EventEmitter<Object> = new EventEmitter();
   ngOnInit() {
@@ -368,10 +368,7 @@ export class SurveyAnalyticsComponent implements OnInit {
       return item;
     });
 
-    var visPanel = new SurveyAnalytics.VisualizationPanel(
-      survey.getAllQuestions(),
-      normalizedData,
-    );
-    visPanel.render(document.getElementById("surveyAnalyticsContainer"));
+    var table = new Tabulator(survey, normalizedData, null);
+    table.render(document.getElementById("surveyAnalyticsContainer"));
   }
 }

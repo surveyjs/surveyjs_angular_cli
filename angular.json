@@ -25,6 +25,8 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/survey-angular/survey.css",
               "node_modules/survey-analytics/survey.analytics.css",
+              "node_modules/survey-analytics/survey.analytics.tabulator.css",
+              "node_modules/survey-analytics/survey.analytics.datatables.css",
               "node_modules/survey-creator/survey-creator.css",
               "node_modules/jquery-ui/themes/base/theme.css",
               "node_modules/jquery-ui/themes/base/datepicker.css",
@@ -41,7 +43,13 @@
               "node_modules/jquery-bar-rating/dist/themes/bars-reversed.css",
               "node_modules/jquery-bar-rating/dist/themes/bars-square.css",
               "node_modules/jquery-bar-rating/dist/themes/bootstrap-stars.css",
-              "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars-o.css"
+              "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars-o.css",
+
+              //styles for datatables
+              "node_modules/datatables.net-colreorder-dt/css/colReorder.dataTables.css",
+              
+              //styles for tabulator
+              "node_modules/tabulator-tables/dist/css/tabulator.css"
             ],
             "scripts": [
               "node_modules/ace-builds/src-min/ace.js",
@@ -53,7 +61,22 @@
               "node_modules/select2/dist/js/select2.js",
               "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js",
               "node_modules/ckeditor/ckeditor.js",
-              "node_modules/emotion-ratings/dist/emotion-ratings.js"
+              "node_modules/emotion-ratings/dist/emotion-ratings.js",
+   
+              //script for datatables
+              "node_modules/datatables.net/js/jquery.dataTables.js",
+              "node_modules/datatables.net-dt/js/dataTables.dataTables.js",
+              "node_modules/datatables.net-buttons/js/dataTables.buttons.js",
+              "node_modules/datatables.net-buttons/js/buttons.print.js",
+              "node_modules/datatables.net-buttons/js/buttons.html5.js",
+              "node_modules/datatables.net-colreorder/js/dataTables.colReorder.js",
+              "node_modules/datatables.net-rowgroup/js/dataTables.rowGroup.js",
+   
+
+              //for tabulator's exports
+              "node_modules/jspdf/dist/jspdf.min.js",
+              "node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.min.js",
+              "node_modules/xlsx/dist/xlsx.min.js"
             ]
           },
           "configurations": {
@@ -104,7 +127,9 @@
               "node_modules/jquery/dist/jquery.js",
               "node_modules/jquery-ui/ui/widgets/datepicker.js",
               "node_modules/select2/dist/js/select2.js",
-              "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js"
+              "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js",
+              "node_modules/survey-analytics/survey.analytics.tabulator.js",
+              "node_modules/survey-analytics/survey.analytics.datatables.js"
             ],
             "styles": [
               "src/styles.css",

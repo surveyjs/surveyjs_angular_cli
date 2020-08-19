@@ -11,7 +11,13 @@ import { SurveyPage } from "./pages/survey.page";
 import { SurveyCreatorComponent } from "./components/survey.creator.component";
 import { CreatorPage } from "./pages/creator.page";
 import { SurveyAnalyticsComponent } from "./components/survey.analytics.component";
+import { SurveyAnalyticsTabulatorComponent } from "./components/survey.analytics.tabulator";
+import { SurveyAnalyticsDatatablesComponent } from "./components/survey.analytics.datatables";
+
 import { AnalyticsPage } from "./pages/analytics.page";
+import { AnalyticsTabulatorPage } from "./pages/analytics.tabulator.page";
+import { AnalyticsDatatablesPage } from "./pages/analytics.datatables.page";
+
 import { PdfExportPage } from "./pages/pdfexport.page";
 
 @NgModule({
@@ -23,8 +29,12 @@ import { PdfExportPage } from "./pages/pdfexport.page";
     SurveyCreatorComponent,
     CreatorPage,
     SurveyAnalyticsComponent,
+    SurveyAnalyticsDatatablesComponent,
+    SurveyAnalyticsTabulatorComponent,
     AnalyticsPage,
     PdfExportPage,
+    AnalyticsTabulatorPage,
+    AnalyticsDatatablesPage,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [],
