@@ -127,10 +127,7 @@
               "node_modules/jquery/dist/jquery.js",
               "node_modules/jquery-ui/ui/widgets/datepicker.js",
               "node_modules/select2/dist/js/select2.js",
-              "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js",
-              "node_modules/survey-analytics/survey.analytics.tabulator.js",
-              "node_modules/survey-analytics/survey.analytics.datatables.js"
-            ],
+              "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js"],
             "styles": [
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
