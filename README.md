@@ -2,7 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) and modified to use SurveyJS: Survey Library and Survey Creator.
 
-You can just clone this repo and run "npm i" and "ng serve" command.
+You can just clone this repo and run "npm i" and "npm start" command :
+
+```
+git clone https://github.com/surveyjs/surveyjs_angular_cli.git
+cd surveyjs_angular_cli
+npm i
+npm start
+```
 
 
 ## Steps to add SurveyJS: Survey Library and Survey Creator into the generated empty project
