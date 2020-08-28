@@ -21,13 +21,13 @@ npm start
 	```
 
  2. **Add SurveyJS: Survey Library and Survey Creator dependencies.**
-  ```
-  npm install -save survey-angular
-  npm install -save surveyjs-widgets
-  npm install -save survey-creator
-  npm install -save survey-pdf
-  npm install -save bootstrap
-  ```
+  	```
+    npm install -save survey-angular
+    npm install -save surveyjs-widgets
+    npm install -save survey-creator
+    npm install -save survey-pdf
+    npm install -save bootstrap
+	```
 
 3. **Add knockout typings to the '/src/tsconfig.app.json' file.**
 	```
@@ -37,11 +37,11 @@ npm start
 	```
 
 4. **Add Survey and Survey Creator components files.**
- ```
- src/app/survey.component.ts
- src/app/survey.creator.component.ts
- src/app/customwidget.ts
-  ```
+ 	```
+    src/app/survey.component.ts
+    src/app/survey.creator.component.ts
+    src/app/customwidget.ts
+	```
 
 5. **Use compoents in the app.module.ts file.**
 	```
@@ -101,7 +101,7 @@ npm start
             ]
 	```
 9. **Add json object for survey to AppComponent**
-  ```
+	```
     export class AppComponent {
           ...
           json = {
@@ -109,10 +109,9 @@ npm start
           };
           ...
     }
-
-  ```
+	```
 10. **Enable experimentalDecorators in the tsconfig.json**
-  ```
+ 	```
     ...
     compilerOptions: {
       ...
@@ -120,7 +119,7 @@ npm start
       ...
     }
     ...
-  ```
+	```
 11. **Run project.**
 	```
 	ng serve
