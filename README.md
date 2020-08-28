@@ -34,16 +34,26 @@ npm start
     "types": [
       "knockout"
     ]
-	```
 
-4. **Add Survey and Survey Creator components files.**
+	```
+4. **Enable experimentalDecorators in the '/src/tsconfig.app.json' file**
+ 	```
+    ...
+    compilerOptions: {
+      ...
+      experimentalDecorators: true
+      ...
+    }
+    ...
+	```
+5. **Add Survey and Survey Creator components files.**
  	```
     src/app/survey.component.ts
     src/app/survey.creator.component.ts
     src/app/customwidget.ts
 	```
 
-5. **Use compoents in the app.module.ts file.**
+6. **Use compoents in the app.module.ts file.**
 	```
 	import { SurveyComponent } from './survey.component';
 	import { SurveyCreatorComponent } from './survey.creator.component';
@@ -55,20 +65,20 @@ npm start
     ],
 	```
 	  
-6. **Change markup in the app.component.html file.**
+7. **Change markup in the app.component.html file.**
 	```
 	<h1>Survey</h1><survey [json]="json"></survey>
 	<h1>SurveyJS Creator</h1><survey-creator></survey-creator>
 	```
 
-7. **Add "jQuery polyfill" for bootstrap in the polyfills.ts file (https://github.com/angular/angular-cli/issues/2129).**
+8. **Add "jQuery polyfill" for bootstrap in the polyfills.ts file (https://github.com/angular/angular-cli/issues/2129).**
 
 	```
 	import * as jQuery from 'jquery';
 	window['jQuery'] = jQuery;
 	```
   
-8. **Update the "build" section of the angular.json file to include the following:**
+9. **Update the "build" section of the angular.json file to include the following:**
 	```
      "styles": [
               "src/styles.css",
@@ -100,7 +110,7 @@ npm start
               "node_modules/emotion-ratings/dist/emotion-ratings.js"
             ]
 	```
-9. **Add json object for survey to AppComponent**
+10. **Add json object for survey to AppComponent**
 	```
     export class AppComponent {
           ...
@@ -110,16 +120,7 @@ npm start
           ...
     }
 	```
-10. **Enable experimentalDecorators in the tsconfig.json**
- 	```
-    ...
-    compilerOptions: {
-      ...
-      experimentalDecorators: true
-      ...
-    }
-    ...
-	```
+
 11. **Run project.**
 	```
 	ng serve
