@@ -19,6 +19,7 @@ You can just clone this repo and run "npm i" and "ng serve" command.
   npm install -save surveyjs-widgets
   npm install -save survey-creator
   npm install -save survey-pdf
+  npm install -save bootstrap
   ```
 
 3. **Add knockout typings to the '/src/tsconfig.app.json' file.**
@@ -32,6 +33,7 @@ You can just clone this repo and run "npm i" and "ng serve" command.
 	```
 	src/app/survey.component.ts
 	src/app/survey.creator.component.ts
+  src/app/customwidget.ts
 	```
 
 5. **Use compoents in the app.module.ts file.**
@@ -59,7 +61,7 @@ You can just clone this repo and run "npm i" and "ng serve" command.
 	window['jQuery'] = jQuery;
 	```
   
-8. **Uupdate the "build" section of the angular.json file to include the following:**
+8. **Update the "build" section of the angular.json file to include the following:**
 	```
      "styles": [
               "src/styles.css",
@@ -88,12 +90,30 @@ You can just clone this repo and run "npm i" and "ng serve" command.
               "node_modules/jquery-ui/ui/widgets/datepicker.js",
               "node_modules/select2/dist/js/select2.js",
               "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js",
-              "node_modules/ckeditor/ckeditor.js",
               "node_modules/emotion-ratings/dist/emotion-ratings.js"
             ]
 	```
-
-9. **Run project.**
+9. **Add json object for survey to AppComponent**
+	```
+  export class AppComponent {
+  ...
+    json = {
+      ...
+    };
+  ...
+  }
+  ```
+10. **Enable experimentalDecorators in the tsconfig.json**
+  ```
+    ...
+    compilerOptions: {
+      ...
+      experimentalDecorators: true
+      ...
+    }
+    ...
+  ```
+11. **Run project.**
 	```
 	ng serve
 	```

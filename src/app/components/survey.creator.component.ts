@@ -13,7 +13,7 @@ widgets.nouislider(SurveyKo);
 widgets.select2tagbox(SurveyKo);
 //widgets.signaturepad(SurveyKo);
 widgets.sortablejs(SurveyKo);
-widgets.ckeditor(SurveyKo);
+// widgets.ckeditor(SurveyKo);
 widgets.autocomplete(SurveyKo);
 widgets.bootstrapslider(SurveyKo);
 //widgets.emotionsratings(SurveyKo);
@@ -21,26 +21,31 @@ initCustomWidget(SurveyKo);
 
 SurveyCreator.StylesManager.applyTheme("default");
 
-var CkEditor_ModalEditor = {
-  afterRender: function(modalEditor, htmlElement) {
-    var editor = window["CKEDITOR"].replace(htmlElement);
-    editor.on("change", function() {
-      modalEditor.editingValue = editor.getData();
-    });
-    editor.setData(modalEditor.editingValue);
-  },
-  destroy: function(modalEditor, htmlElement) {
-    var instance = window["CKEDITOR"].instances[htmlElement.id];
-    if (instance) {
-      instance.removeAllListeners();
-      window["CKEDITOR"].remove(instance);
-    }
-  }
-};
-SurveyCreator.SurveyPropertyModalEditor.registerCustomWidget(
-  "html",
-  CkEditor_ModalEditor
-);
+// var CkEditor_ModalEditor = {
+//   afterRender: function(modalEditor, htmlElement) {
+//     var editor = window["CKEDITOR"].replace(htmlElement);
+//     editor.on("change", function() {
+//       modalEditor.editingValue = editor.getData();
+//     });
+//     editor.setData(modalEditor.editingValue);
+//   },
+//   destroy: function(modalEditor, htmlElement) {
+//     var instance = window["CKEDITOR"].instances[htmlElement.id];
+//     if (instance) {
+//       instance.removeAllListeners();
+//       window["CKEDITOR"].remove(instance);
+//     }
+//   }
+// };
+// SurveyCreator.SurveyPropertyModalEditor.registerCustomWidget(
+//   "html",
+//   CkEditor_ModalEditor
+// );
+// CKEditor is the third party library
+/* Steps to use CKEditor in the project:
+    1. run 'npm i ckeditor'
+    2. update the "build" section of the angular.json: add ckeditor.js script in the scripts section.
+*/
 
 @Component({
   selector: "survey-creator",
