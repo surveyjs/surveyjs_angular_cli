@@ -37,11 +37,11 @@ npm start
 	```
 
 4. **Add Survey and Survey Creator components files.**
-	```
-	src/app/survey.component.ts
-	src/app/survey.creator.component.ts
-  src/app/customwidget.ts
-	```
+ ```
+ src/app/survey.component.ts
+ src/app/survey.creator.component.ts
+ src/app/customwidget.ts
+  ```
 
 5. **Use compoents in the app.module.ts file.**
 	```
@@ -101,14 +101,15 @@ npm start
             ]
 	```
 9. **Add json object for survey to AppComponent**
-	```
-  export class AppComponent {
-  ...
-    json = {
-      ...
-    };
-  ...
-  }
+  ```
+    export class AppComponent {
+          ...
+          json = {
+            ...
+          };
+          ...
+    }
+
   ```
 10. **Enable experimentalDecorators in the tsconfig.json**
   ```
