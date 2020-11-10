@@ -8,6 +8,6 @@
     "baseUrl": "",
     "types": ["jasmine", "node", "knockout"]
   },
-  "files": ["test.ts", "polyfills.ts"],
+  "files": ["test.ts", "polyfills.ts", "empty.ts"],
   "include": ["**/*.spec.ts", "**/*.d.ts"]
 }
