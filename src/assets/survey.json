@@ -236,6 +236,12 @@
                     "type": "text",
                     "name": "email",
                     "title": "Thank you for taking our survey. Please enter your email address, then press the \"Submit\" button."
+                },
+                {
+                    "type": "editor",
+                    "name": "ckeditor",
+                    "title": "CK Editor",
+                    "defaultValue": "Hello <b>World</b>"
                 }
             ]
         }
