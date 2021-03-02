@@ -74,7 +74,7 @@
    
 
               //for tabulator's exports
-              "node_modules/jspdf/dist/jspdf.min.js",
+              "node_modules/jspdf1/dist/jspdf.min.js",
               "node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.min.js",
               "node_modules/xlsx/dist/xlsx.min.js"
             ]
