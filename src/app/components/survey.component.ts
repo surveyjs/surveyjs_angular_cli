@@ -20,10 +20,10 @@ widgets.prettycheckbox(Survey);
 //widgets.emotionsratings(Survey);
 initCustomWidget(Survey);
 
-Survey.JsonObject.metaData.addProperty("questionbase", "popupdescription:text");
-Survey.JsonObject.metaData.addProperty("page", "popupdescription:text");
+Survey.Serializer.addProperty("questionbase", "popupdescription:text");
+Survey.Serializer.addProperty("page", "popupdescription:text");
 
-Survey.StylesManager.applyTheme("default");
+Survey.StylesManager.applyTheme("defaultV2");
 
 @Component({
   // tslint:disable-next-line:component-selector

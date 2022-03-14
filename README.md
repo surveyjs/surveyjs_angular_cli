@@ -24,7 +24,8 @@ npm start
   	```
     npm install -save survey-angular
     npm install -save surveyjs-widgets
-    npm install -save survey-creator
+    npm install -save survey-creator-core
+    npm install -save survey-creator-knockout
     npm install -save survey-pdf
     npm install -save bootstrap
 	```
@@ -83,8 +84,8 @@ npm start
      "styles": [
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/survey-angular/survey.css",
-              "node_modules/survey-creator/survey-creator.css",
+              "node_modules/survey-angular/defaultV2.min.css",
+              "node_modules/survey-creator-core/survey-creator-core.min.css",
               "node_modules/jquery-ui/themes/base/theme.css",
               "node_modules/jquery-ui/themes/base/datepicker.css",
               "node_modules/nouislider/distribute/nouislider.css",

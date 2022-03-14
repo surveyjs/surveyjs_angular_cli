@@ -26,13 +26,13 @@ export function init(Survey: any) {
     activatedByChanged: function (activatedBy) {
       //we do not need to check acticatedBy parameter, since we will use our widget for customType only
       //We are creating a new class and derived it from text question type. It means that text model (properties and fuctions) will be available to us
-      Survey.JsonObject.metaData.addClass("textwithbutton", [], null, "text");
+      Survey.Serializer.addClass("textwithbutton", [], null, "text");
       //signaturepad is derived from "empty" class - basic question class
-      //Survey.JsonObject.metaData.addClass("signaturepad", [], null, "empty");
+      //Survey.Serializer.addClass("signaturepad", [], null, "empty");
 
       //Add new property(s)
       //For more information go to https://surveyjs.io/Examples/Builder/?id=addproperties#content-docs
-      Survey.JsonObject.metaData.addProperties("textwithbutton", [
+      Survey.Serializer.addProperties("textwithbutton", [
         { name: "buttonText", default: "Click Me" },
       ]);
     },

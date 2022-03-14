@@ -1,25 +1,24 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
-import * as SurveyKo from "survey-knockout";
-import * as SurveyCreator from "survey-creator";
+import * as Survey from "survey-core";
+import * as SurveyKo from "survey-knockout-ui";
+import * as SurveyCreator from "survey-creator-knockout";
 import * as widgets from "surveyjs-widgets";
 import { init as initCustomWidget } from "./customwidget";
 
-widgets.icheck(SurveyKo);
-widgets.select2(SurveyKo);
-widgets.inputmask(SurveyKo);
-widgets.jquerybarrating(SurveyKo);
-widgets.jqueryuidatepicker(SurveyKo);
-widgets.nouislider(SurveyKo);
-widgets.select2tagbox(SurveyKo);
+widgets.icheck(Survey);
+widgets.select2(Survey);
+widgets.inputmask(Survey);
+widgets.jquerybarrating(Survey);
+widgets.jqueryuidatepicker(Survey);
+widgets.nouislider(Survey);
+widgets.select2tagbox(Survey);
 //widgets.signaturepad(SurveyKo);
-widgets.sortablejs(SurveyKo);
-widgets.ckeditor(SurveyKo);
-widgets.autocomplete(SurveyKo);
-widgets.bootstrapslider(SurveyKo);
+widgets.sortablejs(Survey);
+widgets.ckeditor(Survey);
+widgets.autocomplete(Survey);
+widgets.bootstrapslider(Survey);
 //widgets.emotionsratings(SurveyKo);
-initCustomWidget(SurveyKo);
-
-SurveyCreator.StylesManager.applyTheme("default");
+initCustomWidget(Survey);
 
 // var CkEditor_ModalEditor = {
 //   afterRender: function(modalEditor, htmlElement) {
@@ -54,27 +53,25 @@ SurveyCreator.StylesManager.applyTheme("default");
   `
 })
 export class SurveyCreatorComponent {
-  surveyCreator: SurveyCreator.SurveyCreator;
+  creator: SurveyCreator.SurveyCreator;
   @Input() json: any;
   @Output() surveySaved: EventEmitter<Object> = new EventEmitter();
   ngOnInit() {
-    SurveyKo.JsonObject.metaData.addProperty(
+    Survey.Serializer.addProperty(
       "questionbase",
       "popupdescription:text"
     );
-    SurveyKo.JsonObject.metaData.addProperty("page", "popupdescription:text");
+    Survey.Serializer.addProperty("page", "popupdescription:text");
 
     let options = { showEmbededSurveyTab: true, generateValidJSON: true };
-    this.surveyCreator = new SurveyCreator.SurveyCreator(
-      "surveyCreatorContainer",
-      options
-    );
-    this.surveyCreator.text = JSON.stringify(this.json);
-    this.surveyCreator.saveSurveyFunc = this.saveMySurvey;
+    this.creator = new SurveyCreator.SurveyCreator(options);
+    this.creator.JSON = this.json;
+    this.creator.saveSurveyFunc = this.saveMySurvey;
+    this.creator.render("surveyCreatorContainer");
   }
 
   saveMySurvey = () => {
-    console.log(JSON.stringify(this.surveyCreator.text));
-    this.surveySaved.emit(JSON.parse(this.surveyCreator.text));
+    console.log(JSON.stringify(this.creator.text));
+    this.surveySaved.emit(JSON.parse(this.creator.text));
   };
 }
