@@ -12,10 +12,11 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSpec: '12.14'
   displayName: 'Install Node.js'
 
 - script: |
+    export NODE_OPTIONS="--max-old-space-size=8192"
     npm install
     npm run build
   displayName: 'npm install and build'
