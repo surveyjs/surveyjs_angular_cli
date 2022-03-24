@@ -1,4 +1,4 @@
-# Angular 7 Cli (QuickStart Boilerplate) + SurveyJS: Survey Library and Survey Creator
+# Angular 12 Cli (QuickStart Boilerplate) + SurveyJS: Survey Library and Survey Creator
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) and modified to use SurveyJS: Survey Library and Survey Creator.
 
