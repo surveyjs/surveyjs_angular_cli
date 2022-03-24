@@ -16,6 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    export NODE_OPTIONS="--max-old-space-size=8192"
     npm install
     npm run build
   displayName: 'npm install and build'
