@@ -1,13 +1,12 @@
 import { Component } from "@angular/core";
 
-import json from "../../assets/survey.json";
+import { json } from "../data/survey";
 
 @Component({
   selector: "survey-page",
   templateUrl: "./survey.page.html",
 })
 export class SurveyPage {
-  title = "SurveyJS+Angular Demo Application";
   json;
 
   constructor() {
@@ -15,7 +14,6 @@ export class SurveyPage {
   }
 
   sendData(result) {
-    //TODO update with your own behavior
     console.log(result);
   }
 }

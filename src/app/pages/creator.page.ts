@@ -1,10 +1,10 @@
 import { Component } from "@angular/core";
 
-import json from "../../assets/survey.json";
+import { json } from "../data/survey";
 
 @Component({
   selector: "creator-page",
-  templateUrl: "./creator.page.html",
+  templateUrl: "./creator.page.html"
 })
 export class CreatorPage {
   json = json;
