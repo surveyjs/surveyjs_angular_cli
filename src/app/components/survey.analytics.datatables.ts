@@ -1,6 +1,6 @@
 import { Component, Input, EventEmitter, Output, OnInit } from "@angular/core";
-import { Model } from "survey-angular";
-import { DataTables } from "survey-analytics/survey.analytics.datatables.js";
+import { Model } from "survey-core";
+import { DataTables } from "survey-analytics/survey.analytics.datatables";
 
 @Component({
   selector: "survey-analytics-datatables",

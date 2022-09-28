@@ -1,5 +1,5 @@
 import { Component, Input, EventEmitter, Output, OnInit } from "@angular/core";
-import { Model } from "survey-angular";
+import { Model } from "survey-core";
 import { Tabulator } from "survey-analytics/survey.analytics.tabulator";
 
 @Component({
