@@ -1,4 +1,27 @@
 .app-content {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 56px);
   overflow-y: auto;
+}
+.navbar {
+  background-color: #f3f3f3;
+  padding: 16px;
+}
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+.navbar a {
+    line-height: 24px;
+    text-decoration: none;
+    color: #777;
+}
+.navbar a:hover {
+  color: #404040;
+}
+.navbar ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
 }

@@ -1,5 +1,5 @@
 import { Component, Input, EventEmitter, Output, OnInit } from "@angular/core";
-import { Model } from "survey-angular";
+import { Model } from "survey-core";
 import { VisualizationPanel } from "survey-analytics";
 
 @Component({

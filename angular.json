@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -22,8 +25,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/survey-angular/defaultV2.min.css",
+              "node_modules/survey-core/defaultV2.min.css",
               "node_modules/survey-creator-core/survey-creator-core.min.css",
               "node_modules/survey-analytics/survey.analytics.min.css",
               "node_modules/survey-analytics/survey.analytics.tabulator.min.css",
@@ -76,6 +78,14 @@
             ]
           },
           "configurations": {
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            },
             "production": {
               "optimization": true,
               "outputHashing": "all",
@@ -103,8 +113,12 @@
           "configurations": {
             "production": {
               "browserTarget": "surveyjs-angular-cli:build:production"
+            },
+            "development": {
+              "browserTarget": "surveyjs-angular-cli:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -126,8 +140,7 @@
               "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js"],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/survey-angular/defaultV2.css",
+              "node_modules/survey-core/defaultV2.css",
               "node_modules/survey-creator-core/survey-creator-core.css",
               "node_modules/jquery-ui/themes/base/theme.css",
               "node_modules/jquery-ui/themes/base/datepicker.css",

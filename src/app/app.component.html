@@ -1,10 +1,9 @@
 <div id="app">
   <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/">{{ title }}</a>
-      </div>
       <ul class="nav navbar-nav">
+        <li>
+          <a class="navbar-brand" href="/">{{ title }}</a>
+        </li>
         <li>
           <a routerLink="">Home</a>
         </li>
@@ -27,7 +26,8 @@
           <a routerLink="/analyticsdatatables">Results Table (IE Support)</a>
         </li>
       </ul>
-    </div>
   </nav>
-  <router-outlet class="app-content"></router-outlet>
+  <div class="app-content">
+    <router-outlet ></router-outlet>
+  </div>
 </div>

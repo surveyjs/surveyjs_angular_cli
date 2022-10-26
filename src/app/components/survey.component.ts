@@ -1,28 +1,21 @@
 import { Component, Input, EventEmitter, Output, OnInit } from "@angular/core";
-import { StylesManager, Model, SurveyNG } from "survey-angular";
-
-StylesManager.applyTheme("defaultV2");
-
+import { SurveyModel } from "survey-core";
 @Component({
-  selector: "survey",
-  template: `
-    <div class="survey-container contentcontainer codecontainer">
-      <div id="surveyElement"></div>
-    </div>
-  `,
+  selector: "survey-container",
+  template: `<survey [model]='survey'></survey>`,
 })
 export class SurveyComponent implements OnInit {
   @Output() submitSurvey = new EventEmitter<any>();
-  @Input()
-  json: object;
+
+  @Input() json: object;
   result: any;
+  survey: SurveyModel
 
   ngOnInit() {
-    const survey = new Model(this.json);
-    survey.onComplete.add(result => {
+    this.survey = new SurveyModel(this.json);
+    this.survey.onComplete.add(result => {
       this.submitSurvey.emit(result.data);
       this.result = result.data;
     });
-    SurveyNG.render("surveyElement", { model: survey });
   }
 }
