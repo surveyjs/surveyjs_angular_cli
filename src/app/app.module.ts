@@ -19,8 +19,8 @@ import { AnalyticsTabulatorPage } from "./pages/analytics.tabulator.page";
 import { AnalyticsDatatablesPage } from "./pages/analytics.datatables.page";
 
 import { PdfExportPage } from "./pages/pdfexport.page";
-import { SurveyAngularModule } from "survey-angular-ui";
-import { SurveyCreatorAngularModule } from "survey-creator-angular";
+import { SurveyModule } from "survey-angular-ui";
+import { SurveyCreatorModule } from "survey-creator-angular";
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { SurveyCreatorAngularModule } from "survey-creator-angular";
     AnalyticsTabulatorPage,
     AnalyticsDatatablesPage,
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, SurveyAngularModule, SurveyCreatorAngularModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, SurveyModule, SurveyCreatorModule],
   providers: [],
   bootstrap: [AppComponent],
 })

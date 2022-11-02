@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
 import * as Survey from "survey-core";
 // import * as SurveyKo from "survey-knockout-ui";
-import { CreatorBase } from "survey-creator-core";
+import { SurveyCreatorModel } from "survey-creator-core";
 import * as widgets from "surveyjs-widgets";
 import { init as initCustomWidget } from "./customwidget";
 
@@ -22,7 +22,7 @@ initCustomWidget(Survey);
 
 @Component({
   selector: "survey-creator-container",
-  template: `<div id='surveyCreatorContainer'><svc-creator [model]='creator'></svc-creator></div>`,
+  template: `<div id='surveyCreatorContainer'><survey-creator [model]='creator'></survey-creator></div>`,
   styles: [
     `
     #surveyCreatorContainer {
@@ -33,7 +33,7 @@ initCustomWidget(Survey);
   ]
 })
 export class SurveyCreatorComponent {
-  creator: CreatorBase;
+  creator: SurveyCreatorModel;
   @Input() json: any;
   @Output() surveySaved: EventEmitter<Object> = new EventEmitter();
   ngOnInit() {
@@ -41,7 +41,7 @@ export class SurveyCreatorComponent {
     Survey.Serializer.addProperty("page", "popupdescription:text");
 
     const options = { showPreviewTab: true, showLogicTab: true };
-    this.creator = new CreatorBase(options);
+    this.creator = new SurveyCreatorModel(options);
     this.creator.JSON = this.json;
     this.creator.saveSurveyFunc = this.saveMySurvey;
   }
