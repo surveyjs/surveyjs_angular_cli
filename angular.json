@@ -159,7 +159,6 @@
       }
     }
   },
-  "defaultProject": "surveyjs-angular-cli",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
