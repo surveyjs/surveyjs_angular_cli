@@ -1,24 +1,6 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
-import * as Survey from "survey-core";
-// import * as SurveyKo from "survey-knockout-ui";
+import { Serializer } from "survey-core";
 import { SurveyCreatorModel } from "survey-creator-core";
-import * as widgets from "surveyjs-widgets";
-import { init as initCustomWidget } from "./customwidget";
-
-widgets.icheck(Survey);
-widgets.select2(Survey);
-widgets.inputmask(Survey);
-widgets.jquerybarrating(Survey);
-widgets.jqueryuidatepicker(Survey);
-widgets.nouislider(Survey);
-widgets.select2tagbox(Survey);
-//widgets.signaturepad(SurveyKo);
-widgets.sortablejs(Survey);
-widgets.ckeditor(Survey);
-widgets.autocomplete(Survey);
-widgets.bootstrapslider(Survey);
-//widgets.emotionsratings(SurveyKo);
-initCustomWidget(Survey);
 
 @Component({
   selector: "survey-creator-container",
@@ -37,8 +19,8 @@ export class SurveyCreatorComponent {
   @Input() json: any;
   @Output() surveySaved: EventEmitter<Object> = new EventEmitter();
   ngOnInit() {
-    Survey.Serializer.addProperty("questionbase", "popupdescription:text");
-    Survey.Serializer.addProperty("page", "popupdescription:text");
+    Serializer.addProperty("questionbase", "popupdescription:text");
+    Serializer.addProperty("page", "popupdescription:text");
 
     const options = { showPreviewTab: true, showLogicTab: true };
     this.creator = new SurveyCreatorModel(options);

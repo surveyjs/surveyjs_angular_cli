@@ -18,7 +18,7 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "assets": [
               "src/assets",
               "src/favicon.ico"
@@ -29,26 +29,6 @@
               "node_modules/survey-creator-core/survey-creator-core.min.css",
               "node_modules/survey-analytics/survey.analytics.min.css",
               "node_modules/survey-analytics/survey.analytics.tabulator.min.css",
-              "node_modules/survey-analytics/survey.analytics.datatables.min.css",
-              "node_modules/jquery-ui/themes/base/theme.css",
-              "node_modules/jquery-ui/themes/base/datepicker.css",
-              "node_modules/nouislider/distribute/nouislider.css",
-              "node_modules/select2/dist/css/select2.css",
-              "node_modules/pretty-checkbox/dist/pretty-checkbox.css",
-              "node_modules/bootstrap-slider/dist/css/bootstrap-slider.css",
-              "node_modules/jquery-bar-rating/dist/themes/bars-pill.css",
-              "node_modules/jquery-bar-rating/dist/themes/css-stars.css",
-              "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css",
-              "node_modules/jquery-bar-rating/dist/themes/bars-1to10.css",
-              "node_modules/jquery-bar-rating/dist/themes/bars-horizontal.css",
-              "node_modules/jquery-bar-rating/dist/themes/bars-movie.css",
-              "node_modules/jquery-bar-rating/dist/themes/bars-reversed.css",
-              "node_modules/jquery-bar-rating/dist/themes/bars-square.css",
-              "node_modules/jquery-bar-rating/dist/themes/bootstrap-stars.css",
-              "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars-o.css",
-
-              "node_modules/datatables.net-colreorder-dt/css/colReorder.dataTables.css",
-              
               "node_modules/tabulator-tables/dist/css/tabulator.css"
             ],
             "scripts": [
@@ -56,23 +36,8 @@
               "node_modules/ace-builds/src-min/worker-json.js",
               "node_modules/ace-builds/src-min/mode-json.js",
               "node_modules/ace-builds/src-min/ext-language_tools.js",
-              "node_modules/jquery/dist/jquery.js",
-              "node_modules/jquery-ui/ui/widgets/datepicker.js",
-              "node_modules/select2/dist/js/select2.js",
-              "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js",
-              "node_modules/ckeditor/ckeditor.js",
-              "node_modules/emotion-ratings/dist/emotion-ratings.js",
-   
-              "node_modules/datatables.net/js/jquery.dataTables.js",
-              "node_modules/datatables.net-dt/js/dataTables.dataTables.js",
-              "node_modules/datatables.net-buttons/js/dataTables.buttons.js",
-              "node_modules/datatables.net-buttons/js/buttons.print.js",
-              "node_modules/datatables.net-buttons/js/buttons.html5.js",
-              "node_modules/datatables.net-colreorder/js/dataTables.colReorder.js",
-              "node_modules/datatables.net-rowgroup/js/dataTables.rowGroup.js",
-   
 
-              "node_modules/jspdf1/dist/jspdf.min.js",
+              "node_modules/jspdf/dist/jspdf.umd.min.js",
               "node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.min.js",
               "node_modules/xlsx/dist/xlsx.min.js"
             ]
@@ -108,14 +73,14 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "surveyjs-angular-cli:build"
+            "buildTarget": "surveyjs-angular-cli:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "surveyjs-angular-cli:build:production"
+              "buildTarget": "surveyjs-angular-cli:build:production"
             },
             "development": {
-              "browserTarget": "surveyjs-angular-cli:build:development"
+              "buildTarget": "surveyjs-angular-cli:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -123,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "surveyjs-angular-cli:build"
+            "buildTarget": "surveyjs-angular-cli:build"
           }
         },
         "test": {
@@ -131,33 +96,15 @@
           "options": {
             "main": "src/test.ts",
             "karmaConfig": "./karma.conf.js",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [
-              "node_modules/jquery/dist/jquery.js",
-              "node_modules/jquery-ui/ui/widgets/datepicker.js",
-              "node_modules/select2/dist/js/select2.js",
-              "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js"],
+              "node_modules/jquery/dist/jquery.js"
+            ],
             "styles": [
               "src/styles.css",
               "node_modules/survey-core/defaultV2.css",
-              "node_modules/survey-creator-core/survey-creator-core.css",
-              "node_modules/jquery-ui/themes/base/theme.css",
-              "node_modules/jquery-ui/themes/base/datepicker.css",
-              "node_modules/nouislider/distribute/nouislider.css",
-              "node_modules/select2/dist/css/select2.css",
-              "node_modules/pretty-checkbox/dist/pretty-checkbox.css",
-              "node_modules/bootstrap-slider/dist/css/bootstrap-slider.css",
-              "node_modules/jquery-bar-rating/dist/themes/bars-pill.css",
-              "node_modules/jquery-bar-rating/dist/themes/css-stars.css",
-              "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css",
-              "node_modules/jquery-bar-rating/dist/themes/bars-1to10.css",
-              "node_modules/jquery-bar-rating/dist/themes/bars-horizontal.css",
-              "node_modules/jquery-bar-rating/dist/themes/bars-movie.css",
-              "node_modules/jquery-bar-rating/dist/themes/bars-reversed.css",
-              "node_modules/jquery-bar-rating/dist/themes/bars-square.css",
-              "node_modules/jquery-bar-rating/dist/themes/bootstrap-stars.css",
-              "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars-o.css"
+              "node_modules/survey-creator-core/survey-creator-core.css"
             ],
             "assets": [
               "src/assets",
@@ -201,7 +148,6 @@
       }
     }
   },
-  "defaultProject": "surveyjs-angular-cli",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
