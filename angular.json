@@ -84,14 +84,14 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "surveyjs-angular-cli:build"
+            "buildTarget": "surveyjs-angular-cli:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "surveyjs-angular-cli:build:production"
+              "buildTarget": "surveyjs-angular-cli:build:production"
             },
             "development": {
-              "browserTarget": "surveyjs-angular-cli:build:development"
+              "buildTarget": "surveyjs-angular-cli:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -99,7 +99,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "surveyjs-angular-cli:build"
+            "buildTarget": "surveyjs-angular-cli:build"
           }
         },
         "test": {
