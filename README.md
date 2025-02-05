@@ -40,17 +40,11 @@ This template covers most basic use cases. You can find code examples for them i
     - [src/app/components/survey.analytics.component.ts](src/app/components/survey.analytics.component.ts)
     - [src/app/pages/analytics.page.html](src/app/pages/analytics.page.html)
     - [src/app/pages/analytics.page.ts](src/app/pages/analytics.page.ts)
-  - As a table (modern browsers)
+  - As a table
     - [src/app/data/analytics.ts](src/app/data/analytics.ts)
     - [src/app/components/survey.analytics.tabulator.ts](src/app/components/survey.analytics.tabulator.ts)
     - [src/app/pages/analytics.tabulator.page.html](src/app/pages/analytics.tabulator.page.html)
     - [src/app/pages/analytics.tabulator.page.ts](src/app/pages/analytics.tabulator.page.ts)
-  - As a table (old browsers)
-    - [src/app/data/analytics.ts](src/app/data/analytics.ts)
-    - [src/app/components/survey.analytics.datatables.ts](src/app/components/survey.analytics.datatables.ts)
-    - [src/app/pages/analytics.datatables.page.html](src/app/pages/analytics.datatables.page.html)
-    - [src/app/pages/analytics.datatables.page.ts](src/app/pages/analytics.datatables.page.ts)
-- Create a custom question type
   - [src/app/components/customwidget.ts](src/app/components/customwidget.ts)
 - Register third-party components
   - [src/App.js](src/app/components/survey.creator.component.ts#L8)

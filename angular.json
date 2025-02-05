@@ -18,7 +18,7 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "assets": [
               "src/assets",
               "src/favicon.ico"
@@ -29,8 +29,6 @@
               "node_modules/survey-creator-core/survey-creator-core.min.css",
               "node_modules/survey-analytics/survey.analytics.min.css",
               "node_modules/survey-analytics/survey.analytics.tabulator.min.css",
-              "node_modules/survey-analytics/survey.analytics.datatables.min.css",
-              "node_modules/datatables.net-colreorder-dt/css/colReorder.dataTables.css",
               "node_modules/tabulator-tables/dist/css/tabulator.css"
             ],
             "scripts": [
@@ -38,15 +36,6 @@
               "node_modules/ace-builds/src-min/worker-json.js",
               "node_modules/ace-builds/src-min/mode-json.js",
               "node_modules/ace-builds/src-min/ext-language_tools.js",
-   
-              "node_modules/datatables.net/js/jquery.dataTables.js",
-              "node_modules/datatables.net-dt/js/dataTables.dataTables.js",
-              "node_modules/datatables.net-buttons/js/dataTables.buttons.js",
-              "node_modules/datatables.net-buttons/js/buttons.print.js",
-              "node_modules/datatables.net-buttons/js/buttons.html5.js",
-              "node_modules/datatables.net-colreorder/js/dataTables.colReorder.js",
-              "node_modules/datatables.net-rowgroup/js/dataTables.rowGroup.js",
-   
 
               "node_modules/jspdf/dist/jspdf.umd.min.js",
               "node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.min.js",
@@ -107,7 +96,7 @@
           "options": {
             "main": "src/test.ts",
             "karmaConfig": "./karma.conf.js",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [
               "node_modules/jquery/dist/jquery.js"
