@@ -25,7 +25,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/survey-core/defaultV2.min.css",
+              "node_modules/survey-core/survey-core.min.css",
               "node_modules/survey-creator-core/survey-creator-core.min.css",
               "node_modules/survey-analytics/survey.analytics.min.css",
               "node_modules/survey-analytics/survey.analytics.tabulator.min.css",
@@ -35,7 +35,6 @@
               "node_modules/ace-builds/src-min/ace.js",
               "node_modules/ace-builds/src-min/worker-json.js",
               "node_modules/ace-builds/src-min/mode-json.js",
-              "node_modules/ace-builds/src-min/ext-language_tools.js",
 
               "node_modules/jspdf/dist/jspdf.umd.min.js",
               "node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.min.js",
