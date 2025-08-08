@@ -102,7 +102,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/survey-core/defaultV2.css",
+              "node_modules/survey-core/survey-core.css",
               "node_modules/survey-creator-core/survey-creator-core.css"
             ],
             "assets": [
